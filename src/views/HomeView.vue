@@ -13,8 +13,7 @@
     <Parallax />
     <Parceiros />
     <QuemSomos />
-    <FaleConosco />
-    
+    <FaleConosco />    
   </div>
 </template>
 
