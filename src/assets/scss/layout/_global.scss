@@ -1,0 +1,79 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  display: block;
+  font-weight: 600;
+  line-height: 150%;
+}
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 36px;
+}
+h3 {
+  font-size: 32px;
+}
+h4 {
+  font-size: 28px;
+}
+h5 {
+  font-size: 24px;
+}
+h6 {
+  font-size: 20px;
+}
+@media (min-width: $md) {
+  h1 {
+    font-size: 48px;
+  }
+  h2 {
+    font-size: 44px;
+  }
+  h3 {
+    font-size: 40px;
+  }
+  h4 {
+    font-size: 36px;
+  }
+  h5 {
+    font-size: 32px;
+  }
+  h6 {
+    font-size: 28px;
+  }
+}
+
+// Paragraph
+p {
+  line-height: 120%;
+}
+@media (min-width: $md) {
+  p {
+    line-height: 150%;
+  } 
+}
+
+// Link
+a {
+  color: inherit;
+  &:hover {
+    color: inherit;
+  }
+}
+
+// Responsive
+.desk {
+  display: none;
+  @media (min-width: $lg) {
+    display: block;
+  }
+}
+.mobile {
+  @media (min-width: $lg) {
+    display: none;
+  }
+}

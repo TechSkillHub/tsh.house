@@ -1,0 +1,131 @@
+form {
+  input, textarea {
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid $grey1;
+    padding: 10px;
+    min-height: 46px;
+    transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+    &.has-error {
+      border-color: $error;
+      background-color: rgba($error, 0.2);
+    }
+  }
+  span {
+    display: flex;
+    position: absolute;
+    bottom: -15px;
+    color: $error;
+    font-size: 12px;
+    padding: 0;
+    align-items: baseline;
+    min-height: 30px;
+  }
+  .v-select {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    &.has-error {
+      .vs__dropdown-toggle {
+        border-color: $error;
+        background-color: rgba($error, 0.2);
+      }
+    }
+    .vs__dropdown-toggle {
+      outline: none;
+      border-radius: 5px;
+      border: 2px solid $grey1;
+      padding: 6px 10px;
+      height: auto;
+      background-color: $white;
+      transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out,
+      background-color 0.3s ease-in-out;
+      &.has-error {
+        border-color: $error;
+        background-color: rgba($error, 0.2);
+      }
+      .vs__selected-options {
+        padding: 0;
+        color: #757575;
+        display: flex;
+        display: flex;
+        flex-basis: 100%;
+        flex-grow: 1;
+        flex-wrap: wrap;
+        padding: 2px;
+        position: relative;
+        overflow: overlay;
+        span {
+          z-index: 1;
+          padding: 1px 10px;
+          margin: 0;
+          font-size: 16px;
+          left: -2px;
+          top: 0px;
+          position: relative;
+          min-height: auto;
+          margin-right: 7px;
+          border-radius: 15px;
+          margin-bottom: 3px;
+          @media (min-width: $md) {
+            margin-bottom: 0;
+          }
+        }
+        input {
+          margin: 0;
+        }
+      }
+      .vs__actions {
+        button {
+          margin-top: -5px;
+        }
+      }
+    }
+    .vs__dropdown-menu {
+      border: none;
+      padding-top: 10px;
+    }
+    .vs__search {
+      padding: 0px;
+      z-index: 0;
+      min-height: unset;
+    }
+  }
+}
+button {
+  border-radius: 5px;
+  display: block;
+  padding: 0.5rem 20px;
+  font-weight: 500;
+  cursor: pointer;
+  width: fit-content;
+  &.primary {
+    background-color: $primary;
+    color: $white;
+    border: 1px solid $primary;
+    transition: ease-in-out 0.3s;
+    &:hover {
+      background-color: rgba($primary, 0.8);
+    }
+    &.inactive {
+      background-color: transparent;
+      color: $grey2;
+      border: none;
+    }
+  }
+  &.secondary {
+    background-color: rgb($secondary-light, 0.7);
+    border: 1px solid $secondary;
+    color: $white;
+  }
+  &.outlined {
+    background-color: transparent;
+    border: 1px solid $primary;
+    transition: ease-in-out 0.3s;
+    &:hover {
+      background-color: rgb($primary, 0.4);
+    }
+  }
+}
+
