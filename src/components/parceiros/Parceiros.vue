@@ -5,7 +5,7 @@
       <p class="text-center">Sim, PARCEIROS!<br/>Entendemos que mais do que simples clientes precisamos criar uma relação de parceiria,<br/> para que com esse vínculo possamos criarmos um case de sucesso.</p>
 
       <div class="row">
-        <div class="col-10 offset-lg-1 partners my-5">
+        <div class="col-10 mx-auto partners my-5">
           <img src="./imgs/amil.png" alt="" class="w-100">
           <img src="./imgs/claro.png" alt="" class="w-100">
           <img src="./imgs/lubrax.svg" alt="" class="w-100">
@@ -45,6 +45,13 @@ export default {};
       padding: 4rem;
       &:hover {
         filter: grayscale(0);
+      }
+    }
+    @media (max-width: $lg) {
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      img {
+        padding: 0.5rem;
       }
     }
   }

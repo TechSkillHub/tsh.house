@@ -1,9 +1,9 @@
 <template>
   <div id="solucoes" class="container-fluid d-flex align-itens-center">
     <div class="container d-flex flex-column justify-content-center text-center">
-      <h1>A <span>Tech Skill Hub</span> possuí a solução<br/>ideal para sua necessidade!</h1>
+      <h1 class="mb-5">A <span>Tech Skill Hub</span> possuí a solução<br/>ideal para sua necessidade!</h1>
       <div class="row justify-content-around">
-        <div v-for="(item, index) in solutions" :key="index" class="col card mx-2 mb-5 pb-4">
+        <div v-for="(item, index) in solutions" :key="index" class="col-10 col-lg card mx-2 mb-5 pb-4">
           <img
             :src="item.image"
             alt="Soluções"
@@ -80,14 +80,10 @@ export default {
     margin: auto;
     font-size: 1.75rem;
   }
-  .mobile {
-    display: block;
-  }
   .card{
     border: 5px solid transparent;
     img {
       transition: all 0.5s;
-
     }
     &:hover {
       border: 5px solid $primary;
@@ -96,18 +92,13 @@ export default {
       }
     }
   }
-  @media (min-width: $md) {
-    .mobile {
-      display: none;
-    }
+  @media (max-width: $lg) {
     h1 {
-      margin-bottom: 80px;
+      font-size: 2rem;
+      line-height: 120%;
     }
-    h6 {
-      min-height: 84px;
-    } 
-    p {
-      max-width: 220px;
+    h5 {
+      font-size: 1.25rem;
     }
   }
 }

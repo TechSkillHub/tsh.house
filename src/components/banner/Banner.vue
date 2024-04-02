@@ -3,7 +3,7 @@
     <div class="bg-dark"></div>
     <div class="container d-flex flex-column justify-content-center">
       <div class="row d-flex flex-row">
-        <div class="col-8 mx-auto bg-text mb-5">
+        <div class="col-10 col-lg-8 mx-auto bg-text mb-5">
           <h5>
             Nós da <span>TSH</span>, estamos comprometidos em oferecer uma ampla gama de serviços essenciais para aprimorar sua presença online e garantir que sua marca se destaque no mundo digital.
           </h5>
@@ -49,11 +49,7 @@ export default {
       border-radius: 8px;
       opacity: 0.8;
       transition: all 0.5s;
-      filter: drop-shadow(0px 0px 10px $white);
-      // &:hover {
-      //   transform: scale(1.05);
-      //   filter: drop-shadow(0px 0px 10px $black);
-      // }
+      box-shadow: 0px 0px 10px 5px $white;
       h5 {
         line-height: 140%;
         span {
@@ -71,8 +67,19 @@ export default {
       // filter: drop-shadow(0px 0px 10px $white);
     }
   }
-  @media (min-width: $md) {
-    h4 {
+  @media (max-width: $lg) {
+    .container {
+      .bg-text {
+        h5 {
+          font-size: 1.2rem;
+          span {
+            font-size: 1.75rem;
+          }
+        }
+      }
+      button {
+        margin-right: auto;
+      }
     }
   }
 }

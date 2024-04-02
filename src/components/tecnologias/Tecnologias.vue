@@ -174,5 +174,52 @@ export default {};
       }
     }
   }
+  @media (max-width: $lg) {
+    .box-animation {
+      width: 100px;
+      height: 100px;
+      span {
+        &.logo {
+          background-size: 80px;
+        }
+      }
+      @keyframes animateA {
+        0% {
+          transform: translate(-150px, 100px) scale(0.4);
+          z-index: 1;
+        }
+        50% {
+          transform: translate(150px, -100px) scale(0.4);
+          z-index: 1;
+        }
+        50.00001% {
+          transform: translate(150px, -100px) scale(0.4);
+          z-index: 3;
+        }
+        100% {
+          transform: translate(-150px, 100px) scale(0.4);
+          z-index: 1;
+        }
+      }
+      @keyframes animateB {
+        0% {
+          transform: translate(-150px, -100px) scale(0.4);
+          z-index: 1;
+        }
+        50% {
+          transform: translate(150px, 100px) scale(0.4);
+          z-index: 1;
+        }
+        50.00001% {
+          transform: translate(150px, 100px) scale(0.4);
+          z-index: 3;
+        }
+        100% {
+          transform: translate(-150px, -100px) scale(0.4);
+          z-index: 1;
+        }
+      }
+    }
+  }
 }
 </style>

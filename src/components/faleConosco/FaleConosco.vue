@@ -3,14 +3,14 @@
     <div class="container">
       <h1 class="text-center">Fale Conosco</h1>
       <div class="row mt-5">
-        <div class="col-4 offset-lg-2">
+        <div class="col-10 col-lg-4 offset-lg-2 offset-1">
           <h6>
             Estamos aqui para transformar suas ideias em realidade.<br/><br/>
             Entre em contato e vamos criar juntos a solução perfeita para o seu projeto!
           </h6>
           <img src="./imgs/contactUs.svg" alt="">
         </div>
-        <div class="col-5">
+        <div class="col-12 col-lg-5">
           <Form @submit="submit" class="d-flex flex-column p-4 position-relative">
             <Input
               labelInput="Nome"

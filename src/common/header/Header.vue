@@ -202,5 +202,8 @@ nav.navbar {
       padding-top: 0px;
     }
   }
+  .navbar-toggler-icon {
+    background-image: url('./../../assets/images/hamburger.svg');
+  }
 }
 </style>

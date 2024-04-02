@@ -2,7 +2,7 @@
   <div id="quem-somos" class="container-fluid d-flex align-itens-center">
     <div class="container">
       <div class="row">
-        <div class="col-lg-7">
+        <div class="col-10 offset-1 offset-lg-0 col-lg-7">
           <h1 class="mb-5">Quem Somos?</h1>
           <p>Embora jovem, nossa empresa é impulsionada por uma equipe de fundadores e profissionais com vasta experiência e conhecimento consolidado em suas respectivas áreas. Essa combinação nos permite garantir os melhores resultados.</p>
 
@@ -39,6 +39,12 @@ export default {};
   }
   p {
     color: $white;
+  }
+  @media (max-width: $lg) {
+    h1 {
+      font-size: 4rem;
+      line-height: 120%;
+    }
   }
 }
 </style>
