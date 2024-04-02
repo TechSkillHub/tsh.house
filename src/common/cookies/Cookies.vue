@@ -3,7 +3,7 @@
 <div id="cookies" v-if="!showCookies" class="modal d-block show">
   <div class="mask" @click="close()"></div>
   <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
+    <div class="modal-content pb-5 pb-lg-0">
       <div class="container my-auto">
         <div class="row">
           <div class="col-12 col-lg-9 ">
