@@ -7,7 +7,9 @@
           <h5>
             Nós da <span>TSH</span>, estamos comprometidos em oferecer uma ampla gama de serviços essenciais para aprimorar sua presença online e garantir que sua marca se destaque no mundo digital.
           </h5>
-          <button class="primary mt-4">Conte-nos sua idéia</button>
+          <router-link :to="{ path: '/', hash: '#fale-conosco' }">
+            <button class="primary mt-4">Conte-nos sua idéia</button>
+          </router-link>
         </div>
         
       </div>
@@ -58,6 +60,9 @@ export default {
           font-size: 2.5rem;
         }
       }
+    }
+    a {
+      text-decoration: none;
     }
     button {
       font-size: 1.2rem;
