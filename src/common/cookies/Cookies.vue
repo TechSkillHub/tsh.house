@@ -61,7 +61,8 @@ export default {
     margin: 0;
   }
   .modal-content {
-    margin-top: auto;
+    position: absolute;
+    bottom: 0;
     border-radius: 0;
     min-height: 130px;
     padding: 1rem;
