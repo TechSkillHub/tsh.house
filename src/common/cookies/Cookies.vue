@@ -6,10 +6,10 @@
     <div class="modal-content">
       <div class="container my-auto">
         <div class="row">
-          <div class="col-9 ">
+          <div class="col-12 col-lg-9 ">
             Nós usamos cookies para garantir a melhor experiência no nosso site, para habilitar serviços e funcionalidades essenciais no nosso site e para coletar dados sobre como os visitantes interagem com o nosso site e serviços. Ao clicar em "Aceitar", você concorda em usarmos todos os cookies para publicidade, análises e suporte. 
           </div>
-          <div class="col-3 d-flex justify-content-evenly align-items-center">
+          <div class="col-12 col-lg-3 d-flex justify-content-evenly align-items-center mt-3 mt-lg-0">
             <button type="button" class="btn primary" @click="acceptCookies()">Aceitar</button>
             <button type="button" class="btn outlined" @click="close()">Recusar</button>
           </div>
@@ -61,9 +61,10 @@ export default {
     margin: 0;
   }
   .modal-content {
-    margin-top: calc(100vh - 130px);
+    margin-top: auto;
     border-radius: 0;
-    height: 130px;
+    min-height: 130px;
+    padding: 1rem;
   }
 }
 .mask {
