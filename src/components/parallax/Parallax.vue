@@ -10,7 +10,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 #parallax {
-  background-image: url("./img/img1.webp");
+  background-image: url("./img/img1.jpg");
 
   min-height: 50vh; 
 
