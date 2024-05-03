@@ -11,7 +11,7 @@
           <img src="./imgs/contactUs.svg" alt="">
         </div>
         <div class="col-12 col-lg-5">
-          <Form @submit="submit" class="d-flex flex-column p-4 position-relative">
+          <Form class="d-flex flex-column p-4 position-relative">
             <Input
               labelInput="Nome"
               nameInput="nome"
@@ -34,7 +34,7 @@
               labelInput="Celular"
               nameInput="celular"
               typeInput="text"
-              rulesInput="required|phoneValid"
+              rulesInput="phoneValid"
               placeholderInput="(  ) _____-____"
               maskInput="(##) #####-####"
               @value="(i) => i.value.length >= 0 ? form.phone = i.value : form.phone"
@@ -44,11 +44,12 @@
               labelInput="Mensagem"
               nameInput="mensagem"
               placeholderInput="Como podemos te ajudar?"
+              rulesInput="required"
               @value="(i) => i.value.length >= 0 ? form.message = i.value : form.message"
               :valueInput="form.message"
             />
             <div class="row">
-              <button class="primary ms-auto mt-4 me-3">
+              <button class="primary ms-auto mt-4 me-3" @click.prevent="submit()">
                 Enviar mensagem
               </button>
             </div>
@@ -62,6 +63,9 @@
 <script>
 import Input from '@/components/form/Input.vue'
 import Textarea from '@/components/form/Textarea.vue'
+import Contact from './../../api/contactUs/index'
+
+const contact = new Contact()
 
 export default {
   data() {
@@ -80,7 +84,7 @@ export default {
   },
   methods: {
     submit() {
-      console.log(this.form)
+      contact.contact(this.form)
     },
   }
 };

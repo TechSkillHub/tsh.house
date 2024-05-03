@@ -73,10 +73,14 @@ defineRule('passwordValid', value => {
 });
 
 defineRule('phoneValid', value => {
-  let phone = value.replace(/[^0-9]+/g, "");
-  let re = /^(?:(?:\+|00)?(55)\s?)?(?:\(?([1-9][0-9])\)?\s?)?((9\d{4}))-?(\d{4})$/;
-  
-  return !re.test(String(phone)) ? 'Insira um celular válido.' : true;
+  if (value) {
+    let phone = value.replace(/[^0-9]+/g, "");
+    let re = /^(?:(?:\+|00)?(55)\s?)?(?:\(?([1-9][0-9])\)?\s?)?((9\d{4}))-?(\d{4})$/;
+    
+    return !re.test(String(phone)) ? 'Insira um celular válido.' : true;
+  } else {
+    return true
+  }
 });
 
 defineRule('CPF', value => {

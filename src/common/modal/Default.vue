@@ -7,11 +7,9 @@
           <h1 class="modal-title fs-5">{{ modalInfo.title }}</h1>
           <button type="button" class="btn-close" @click="close()"></button>
         </div>
-        <div class="modal-body text-center">
-          {{ modalInfo.body }}
-        </div>
+        <div class="modal-body text-center" v-html="modalInfo.body"></div>
         <div class="modal-footer">
-          <button type="button" class="btn primary mx-auto" @click="close()">Close</button>
+          <button type="button" class="btn primary mx-auto" @click="close()">Fechar</button>
         </div>
       </div>
     </div>
