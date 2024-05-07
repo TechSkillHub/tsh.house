@@ -5,9 +5,6 @@
       <div class="row d-flex flex-row">
         <div class="col-10 col-lg-8 mx-auto bg-text mb-5">
           <h5>
-            <span>CHEGAMOS!!!</span><br/>
-            E só não chegamos ontem pra não parecer que era mentira... rsrs
-            <br/><br/>
             Nós da <span>TSH</span>, estamos comprometidos em oferecer uma ampla gama de serviços essenciais para aprimorar sua presença online e garantir que sua marca se destaque no mundo digital.
           </h5>
           <router-link :to="{ path: '/', hash: '#fale-conosco' }">
