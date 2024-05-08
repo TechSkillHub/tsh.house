@@ -2,15 +2,9 @@
   <div id="banner" class="container-fluid p-0">
     <h1 class="title">Apresentação</h1>
     <div class="container text-center">
-      <!-- <h3>Cliente:</h3>
-      <h2>{{ client.name }}</h2> -->
       <img src="./../../../assets/images/logo.svg" alt="Logo TechSkillHub" class="img-fluid logo">
       <h1 class="fontLogo">Tech Skill Hub</h1>
     </div>
-    <!-- <div class="logo">
-      <img src="./../../assets/images/logo.svg" alt="Logo TechSkillHub">
-      <h6 class="fontLogo">TechSkillHub</h6>
-    </div> -->
   </div>
 </template>
 
