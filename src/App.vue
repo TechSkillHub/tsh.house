@@ -6,9 +6,9 @@
   <transition name="fade" mode="out-in">
     <Loading v-if="loading" />
   </transition>
-  <Header />
+  <Header v-if="route != '/presentation'" />
   <RouterView />
-  <Footer />
+  <Footer v-if="route != '/presentation'" />
 </template>
 
 <script>
@@ -37,12 +37,12 @@ export default {
     modalDefault() {
       return this.$store.state.manager.modalDefault
     },
+    route() {
+      return this.$route.path
+    }
   },
-  mounted() {
-    // setTimeout(() => {
-    //   this.$store.commit('manager/SET_LOADING', false)
-    // }, 5000)
-  },
+  mounted() {},
+  created() {},
   watch: {}
 }
 </script>
