@@ -97,7 +97,7 @@
             <router-link to="/presentation">
               <button class="primary mx-auto ms-md-3 mt-3 mt-md-0" to="/presentation">Login</button>
             </router-link>
-            <!-- <button v-else class="secondary mx-auto ms-md-3 mt-3 mt-md-0" @click="logout()">Logout</button> -->
+            
           </ul>
         </div>
       </div>
