@@ -78,14 +78,7 @@
                 >Fale conosco</router-link
               >
             </li>
-            <!-- <li class="nav-item">
-              <router-link
-                :to="{ path: '/dashboard' }"
-                class="nav-link"
-                :class="currentPage == '/dashboard' ? 'active' : ''"
-                >Dashboard</router-link
-              >
-            </li> -->
+            
             <!-- <li class="nav-item">
               <router-link
                 :to="{ path: '/register' }"
