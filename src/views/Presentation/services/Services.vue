@@ -21,6 +21,7 @@
         <h6>{{ item.title }}</h6>
         <p>{{ item.description }}</p>
       </div> -->
+      
     </div>
   </div>
 </template>
