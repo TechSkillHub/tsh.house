@@ -1,10 +1,9 @@
 <template>
-  <div id="cards" class="container-fluid px-0">
-    <!-- <h1 class="title">Serviços</h1> -->
+  <div id="cards" class="container-fluid px-0">    
     <div class="container">
-      <div class="row my-5 d-flex justify-content-around">
-        <div class="card text-center mb-5" v-for="(item, index) in cards" :key="index">
-          <img :src="item.icon" alt="Icon Service" class="mb-4 mx-auto">
+      <div class="row my-5 d-flex justify-content-between">
+        <div class="col-10 col-lg mx-auto mx-lg-3 card text-center mb-5" v-for="(item, index) in cards" :key="index">
+          <img :src="item.icon" alt="Icon Service" class="mb-4 mx-auto img-fluid">
           <h6 class="mb-4">{{ item.title }}</h6>
           <p class="m-0">
             {{ item.description }}
@@ -59,9 +58,13 @@ export default {
 #cards {
   padding-top: 40px;
   padding-bottom: 20px;
-  background-image: url('./imgs/bg.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: $grey1;
+  @media (min-width: $md) {
+    background-image: url('./imgs/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
   .title {
     background-color: $dark;
     text-align: right;
@@ -75,13 +78,12 @@ export default {
       flex-wrap: wrap;
     }
     .card {
-      width: 30%;
-      padding: 50px;
+      padding: 30px;
       border-top: 20px solid $primary;
       box-shadow: 0px 0px 10px $grey2;
       h6 {
         line-height: 100%;
-        min-height: 60px;
+        min-height: 40px;
       }
       p {
         line-height: 180%;

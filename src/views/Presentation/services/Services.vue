@@ -1,27 +1,26 @@
 <template>
   <div id="services" class="container-fluid px-0">
-    <h1 class="title">Serviços</h1>
+    <h1 class="title">A TSH</h1>
     <div class="container">
       <div class="row my-5">
-        <h5>Principais funções</h5>
-        <div class="col-4">
+        <div class="col-11 mx-auto col-lg-4">
           <p class="fw-bold">
             Na TSH, estamos comprometidos em oferecer uma ampla gama de serviços essenciais para aprimorar sua presença online e garantir que sua marca se destaque no mundo digital. Com nossa experiência e dedicação, fornecemos soluções abrangentes para impulsionar seu sucesso empresarial.
           </p>
         </div>
-        <div class="col-4">
+        <div class="col-11 mx-auto col-lg-4">
           <p>Transformamos ideias em realidade, criando sites sob medida que são atraentes, funcionais e responsivos. Nossa equipe de designers e desenvolvedores colabora de perto com você para entregar uma plataforma online que atenda às suas necessidades específicas.</p>
         </div>
-        <div class="col-4">
+        <div class="col-11 mx-auto col-lg-4">
           <p>
             Entendemos a importância de ser encontrado online. Utilizamos estratégias de SEO para impulsionar a visibilidade do seu site nos resultados de pesquisa. Isso significa mais visitantes, mais oportunidades de negócios e um posicionamento de destaque no mercado.
           </p>
         </div>
       </div>
-      <div class="row my-4" v-for="(item, index) in services" :key="index">
+      <!-- <div class="row my-4" v-for="(item, index) in services" :key="index">
         <h6>{{ item.title }}</h6>
         <p>{{ item.description }}</p>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -64,16 +63,19 @@ export default {
   .title {
     background-color: $dark;
     text-align: right;
-    width: 40vw;
-    padding: 15px 100px;
+    width: 90vw;
+    padding: 15px 30px;
     border-radius: 0 15px 15px 0;
     color: $white;
+    font-size: 2rem;
+    @media (min-width: $md) {
+      font-size: 2.5rem;
+      width: 40vw;
+      padding: 15px 100px;      
+    }
   }
   .container {
     text-align: justify;
-    h5 {
-      color: $primary;
-    }
   }
 }
 </style>

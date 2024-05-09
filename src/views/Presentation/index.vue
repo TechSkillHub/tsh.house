@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import Banner from './banner/index.vue'
-import Services from './services/index.vue'
-import Cards from './cards/index.vue'
+import Banner from './banner/Banner.vue'
+import Services from './services/Services.vue'
+import Cards from './cards/Cards.vue'
 
 export default {
   components: {
