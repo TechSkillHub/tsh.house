@@ -11,8 +11,9 @@
           <img src="./imgs/contactUs.svg" alt="">
         </div>
         <div class="col-12 col-lg-5">
-          <Form class="d-flex flex-column p-4 position-relative">
+          <Form class="d-flex flex-column p-4 position-relative" id="form">
             <Input
+              idInput="nome"
               labelInput="Nome"
               nameInput="nome"
               typeInput="text"
@@ -22,6 +23,7 @@
               :valueInput="form.name"
             />
             <Input
+              idInput="email"
               labelInput="E-mail"
               nameInput="e-mail"
               typeInput="email"
@@ -31,6 +33,7 @@
               :valueInput="form.email"
             />
             <Input
+              idInput="celular"
               labelInput="Celular"
               nameInput="celular"
               typeInput="text"
@@ -40,7 +43,8 @@
               @value="(i) => i.value.length >= 0 ? form.phone = i.value : form.phone"
               :valueInput="form.phone"
             />
-            <Textarea 
+            <Textarea
+              idInput="mensagem"
               labelInput="Mensagem"
               nameInput="mensagem"
               placeholderInput="Como podemos te ajudar?"
@@ -51,6 +55,9 @@
             <div class="row">
               <button class="primary ms-auto mt-4 me-3" @click.prevent="submit()">
                 Enviar mensagem
+              </button>
+              <button class="primary ms-auto mt-4 me-3" @click.prevent="test()">
+                Teste
               </button>
             </div>
           </Form>
@@ -82,9 +89,15 @@ export default {
     Input,
     Textarea
   },
+  created() {
+  },
   methods: {
     submit() {
       contact.contact(this.form)
+      document.getElementById("nome").value = ''
+      document.getElementById("email").value = ''
+      document.getElementById("celular").value = ''
+      document.getElementById("mensagem").value = ''
     },
   }
 };

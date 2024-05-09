@@ -4,7 +4,6 @@ import router from "@/router";
 
 export default class Contact {
   contact(data) {
-    console.log(data)
     const newData = {
       service_id: 'service_bt6untz',
       template_id: 'template_0rsdsrb',
