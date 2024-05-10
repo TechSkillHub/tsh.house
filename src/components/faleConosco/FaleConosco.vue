@@ -56,9 +56,6 @@
               <button class="primary ms-auto mt-4 me-3" @click.prevent="submit()">
                 Enviar mensagem
               </button>
-              <button class="primary ms-auto mt-4 me-3" @click.prevent="test()">
-                Teste
-              </button>
             </div>
           </Form>
         </div>

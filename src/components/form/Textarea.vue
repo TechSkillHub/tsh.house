@@ -3,6 +3,7 @@
     <Field :name="nameInput" v-slot="{ field, errors, handleChange }" :rules="rulesInput" :value="valueInput">
       <label class="p-0 fw-bold" :for="nameInput" :class="errors[0] ? 'has-error' : ''">{{ labelInput }}</label>
       <textarea
+        :id="idInput"
         v-bind="this.$emit('value', field)"
         :placeholder="placeholderInput"
         :class="errors[0] ? 'has-error' : ''"
@@ -36,6 +37,10 @@ export default {
       default: "",
     },
     nameInput: {
+      type: String,
+      required: false,
+    },
+    idInput: {
       type: String,
       required: false,
     },
