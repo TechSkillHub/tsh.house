@@ -62,7 +62,7 @@ export default {
     },
     labelInput: {
       type: String,
-      required: true,
+      required: false,
     },
     placeholderInput: {
       type: String,

@@ -1,5 +1,5 @@
 <template>
-  <div id="footer" class="bg-dark border-top py-5">
+  <div id="footer" class="bg-dark border-top py-4">
     <div class="container">
       <div class="row">
         <div class="d-flex flex-column flex-md-row align-items-center">

@@ -102,7 +102,6 @@ export default {
 
 <style lang="scss" scoped>
 #fale-conosco {
-  // min-height: 100vh;
   background-color: $primary;
   padding: 4rem 0;
   h1 {

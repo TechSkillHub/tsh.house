@@ -3,7 +3,7 @@
     <div class="bg-dark"></div>
     <div class="container d-flex flex-column justify-content-center">
       <div class="row d-flex flex-row">
-        <div class="col-10 col-lg-8 mx-auto bg-text mb-5">
+        <div class="col-10 col-lg-7 mx-auto bg-text mb-5">
           <h5>
             Nós da <span>TSH</span>, estamos comprometidos em oferecer uma ampla gama de serviços essenciais para aprimorar sua presença online e garantir que sua marca se destaque no mundo digital.
           </h5>
@@ -28,7 +28,7 @@ export default {
 
 <style lang="scss" scoped>
 #banner {
-  background: url('./imgs/imgBanner.jpg');
+  background: url('./imgs/imgBanner.webp');
   background-size: cover;
   background-position: center;
   color: $primary;
@@ -53,7 +53,7 @@ export default {
       transition: all 0.5s;
       box-shadow: 0px 0px 10px 5px $white;
       h5 {
-        line-height: 140%;
+        line-height: 200%;
         span {
           font-family: $fontLogo;
           color: $primary-light;

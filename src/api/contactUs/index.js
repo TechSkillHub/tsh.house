@@ -28,7 +28,6 @@ export default class Contact {
             title: 'Mensagem enviada!',
             body: 'Aguarde que em breve alguém da nossa equipe<br/>entrará em contato.<br/>Desde já agradeçemos.'
           })
-          router.push('/')
           resolve(resp)
         })
         .catch((error) => {

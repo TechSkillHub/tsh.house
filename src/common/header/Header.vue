@@ -24,13 +24,13 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse" @click="hideMenu()">
+        <div class="collapse navbar-collapse" id="navbarCollapse">
           <!-- <div class="mobile mt-3 justify-content-around">
             <button class="primary">Candidato</button>
             <button class="primary">Empresa</button>
           </div> -->
           <ul class="navbar-nav ms-auto mb-2 mb-md-0">
-            <li class="nav-item">
+            <li class="nav-item" @click="hideMenu()">
               <router-link
                 :to="{ path: '/', hash: '#banner' }"
                 class="nav-link"
@@ -38,7 +38,7 @@
                 >Home</router-link
               >
             </li>
-            <li class="nav-item">
+            <li class="nav-item" @click="hideMenu()">
               <router-link
                 :to="{ path: '/', hash: '#solucoes' }"
                 class="nav-link"
@@ -46,7 +46,29 @@
                 >Soluções</router-link
               >
             </li>
-            <li class="nav-item">
+            <li 
+              class="nav-item dropdown"
+              :class="currentPage == '/sites' || currentPage == '/aplicacoes' ? 'active' : ''"
+            >
+              <a class="nav-link dropdown-toggle" role="button" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                Serviços
+              </a>
+              <ul class="dropdown-menu">
+                <li @click="hideMenu()">
+                  <router-link :to="{ path: '/sites' }" class="dropdown-item my-2">
+                    Desenvolvimento de Sites
+                  </router-link>
+                </li>
+                <li @click="hideMenu()">
+                  <router-link :to="{ path: '/aplicacoes' }" class="dropdown-item my-2">
+                    Aplicações Web e Sistemas
+                  </router-link>
+                </li>
+                <!-- <li @click="hideMenu()"><a class="dropdown-item my-2" href="#">Consultoria SEO</a></li>
+                <li @click="hideMenu()"><a class="dropdown-item my-2" href="#">Infraestrutra em Cloud</a></li> -->
+              </ul>
+            </li>
+            <li class="nav-item" @click="hideMenu()">
               <router-link
                 :to="{ path: '/', hash: '#tecnologias' }"
                 class="nav-link"
@@ -54,7 +76,7 @@
                 >Tecnologias</router-link
               >
             </li>
-            <li class="nav-item">
+            <li class="nav-item" @click="hideMenu()">
               <router-link
                 :to="{ path: '/', hash: '#parceiros' }"
                 class="nav-link"
@@ -62,7 +84,7 @@
                 >Parceiros</router-link
               >
             </li>
-            <li class="nav-item">
+            <li class="nav-item" @click="hideMenu()">
               <router-link
                 :to="{ path: '/', hash: '#quem-somos' }"
                 class="nav-link"
@@ -70,7 +92,7 @@
                 >Quem Somos?</router-link
               >
             </li>
-            <li class="nav-item">
+            <li class="nav-item" @click="hideMenu()">
               <router-link
                 :to="{ path: '/', hash: '#fale-conosco' }"
                 class="nav-link"
@@ -149,6 +171,91 @@ nav {
 }
 nav.navbar {
   padding: 14px 0;
+  .nav-item:not(.dropdown) a {
+    width: fit-content;
+    color: $white;
+    text-decoration: none;
+    &.active, &:hover {
+      color: $primary-light;
+      &::after {
+        display: block;
+        content: ' ';
+        width: 100%;
+        height: 2px;
+        background-color: $secondary;
+      }
+    }
+  }
+  .dropdown-menu {
+    padding-top: 10px !important;
+  }
+  .dropdown {
+    width: fit-content;
+    &.active {
+      margin-bottom: 6px;
+      >a {
+        color: $primary-light;
+        border-bottom: 2px solid $secondary;
+        padding-bottom: 0;
+      }
+    }
+    >a {
+      color: white;
+    }
+  }
+  @media (min-width: $md) {
+    .dropdown {
+      &.active {
+        margin-bottom: 0px;
+        &::after {
+          display: block;
+          content: ' ';
+          width: 100%;
+          height: 2px;
+          background-color: $secondary;
+          margin-top: -8px
+        }
+        &>a {
+          border-bottom: none;
+          padding-bottom: 8px;
+        }
+      }
+      &>a {
+        pointer-events: none;
+        color: white;
+      }
+      &:hover>a {
+        color: $primary !important;
+      }
+    }
+    .dropdown:hover {
+      background-color: $grey1;
+      color: $primary !important;
+      border-radius: 8px 8px 0 0;
+      &::after {
+        display: none;
+      }
+      >.dropdown-menu {
+        display: block;
+        overflow: hidden;
+      }
+    }
+    .dropdown-menu {
+      padding-top: 0 !important;
+      padding: 5px 0;
+      background-color: $grey1;
+      border: none;
+      border-radius: 0 0 8px 8px;
+      border-top: 2px solid $secondary;
+      .dropdown-item {
+        width: auto;
+        font-weight: 500 !important;
+      }
+    }
+    .dropdown-item.active, .dropdown-item:active {
+      background-color: white;
+    }
+  }
   .logo {
     font-family: $fontLogo;
     font-size: 33px;
@@ -170,21 +277,7 @@ nav.navbar {
       text-decoration: none;
     }
   }
-  a {
-    width: fit-content;
-    color: $white;
-    text-decoration: none;
-    &.active {
-      color: $primary-light;
-      &::after {
-        display: block;
-        content: ' ';
-        width: 100%;
-        height: 2px;
-        background-color: $secondary;
-      }
-    }
-  }
+  
   .navbar-toggler {
     outline: none;
     border: none;
@@ -196,6 +289,7 @@ nav.navbar {
     padding-top: 20px;
     @media (min-width: $md) {
       padding-top: 0px;
+      min-height: 37px;
     }
   }
   .navbar-toggler-icon {

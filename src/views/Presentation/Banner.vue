@@ -2,7 +2,7 @@
   <div id="banner" class="container-fluid p-0">
     <h1 class="title">Apresentação</h1>
     <div class="text-center">
-      <img src="./../../../assets/images/logo.svg" alt="Logo TechSkillHub" class="logo">
+      <img src="./../../assets/images/logo.svg" alt="Logo TechSkillHub" class="logo">
       <h1 class="fontLogo">Tech Skill Hub</h1>
     </div>
   </div>

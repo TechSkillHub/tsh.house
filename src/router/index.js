@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import NotFound from '../views/NotFound.vue'
 import HomeView from '../views/HomeView.vue'
 import Presentation from '../views/Presentation/index.vue'
+import Sites from '../views/Sites.vue'
+import Aplicacoes from '../views/Aplicacoes.vue'
 // import Proposal from '../views/proposal/Proposal.vue'
 import store from '../store'
 
@@ -20,6 +22,16 @@ const routes = [
     path: '/presentation',
     name: 'presentation',
     component: Presentation
+  },
+  {
+    path: '/sites',
+    name: 'sites',
+    component: Sites
+  },
+  {
+    path: '/aplicacoes',
+    name: 'aplicacoes',
+    component: Aplicacoes
   },
   // {
   //   path: '/proposal',
