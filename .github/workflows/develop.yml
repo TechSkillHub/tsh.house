@@ -25,6 +25,8 @@ jobs:
 
       - name: Enter dist 🏗️
         run: cd dist
+
+      - name: Upload to cPanel 📂
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}

@@ -117,12 +117,6 @@ export default {
     p {
       line-height: 200%;
     }
-    // h4 {
-    //   font-size: 1.25rem;
-    //   @media (min-width: $sm) {
-    //     font-size: 1.75rem;
-    //   }
-    // }
   }
 }
 </style>
