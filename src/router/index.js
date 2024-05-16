@@ -3,7 +3,8 @@ import NotFound from '../views/NotFound.vue'
 import HomeView from '../views/HomeView.vue'
 import Presentation from '../views/Presentation/index.vue'
 import Sites from '../views/Sites.vue'
-import Aplicacoes from '../views/Aplicacoes.vue'
+import Software from '../views/Software.vue'
+import Seo from '../views/Seo.vue'
 // import Proposal from '../views/proposal/Proposal.vue'
 import store from '../store'
 
@@ -29,9 +30,14 @@ const routes = [
     component: Sites
   },
   {
-    path: '/aplicacoes',
-    name: 'aplicacoes',
-    component: Aplicacoes
+    path: '/software',
+    name: 'software',
+    component: Software
+  },
+  {
+    path: '/seo',
+    name: 'seo',
+    component: Seo
   },
   // {
   //   path: '/proposal',

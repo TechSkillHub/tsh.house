@@ -18,7 +18,7 @@
     <div class="container">
       <div class="row mt-5">
         <div class="col-12 col-lg-3 ms-auto">
-          <img src="./imgs/integration.png" alt="" class="img-fluid">
+          <img src="./imgs/integration.webp" alt="" class="img-fluid">
         </div>
         <div class="col-12 col-lg-7 text-end mx-auto">
           <h4>Benefícios das Integrações Inteligentes</h4>
@@ -75,12 +75,12 @@ export default {
   .cover {
     position: relative;
     height: 40vh;
-    background-image: url('./imgs/bg_aplicacoes.jpg');
+    background-image: url('./imgs/bg_software.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    filter: blur(1px) opacity(0.5);
-    -webkit-filter: blur(1px) opacity(0.5);
+    filter: blur(1px) brightness(0.5);
+    -webkit-filter: blur(1px) brightness(0.5);
     z-index: 0;
   }
   .container {
@@ -90,7 +90,7 @@ export default {
       font-size: 1.75rem;
       width: fit-content;
       padding: 10px 30px;
-      margin-top: -103px;
+      margin-top: -102px;
       z-index: 1;
       background-color: $offWhite;
       border-radius: 8px 8px 0 0;

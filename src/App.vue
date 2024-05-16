@@ -50,7 +50,7 @@ export default {
 <style lang="scss">
 @import '@/assets/scss/main.scss';
 #app {
-  padding-top: 100px;
+  padding-top: 99px;
 }
 .v-enter-active,
 .v-leave-active {

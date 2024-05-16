@@ -48,7 +48,7 @@
             </li>
             <li 
               class="nav-item dropdown"
-              :class="currentPage == '/sites' || currentPage == '/aplicacoes' ? 'active' : ''"
+              :class="currentPage == '/sites' || currentPage == '/software' || currentPage == '/seo' ? 'active' : ''"
             >
               <a class="nav-link dropdown-toggle" role="button" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                 Serviços
@@ -60,12 +60,16 @@
                   </router-link>
                 </li>
                 <li @click="hideMenu()">
-                  <router-link :to="{ path: '/aplicacoes' }" class="dropdown-item my-2">
-                    Aplicações Web e Sistemas
+                  <router-link :to="{ path: '/software' }" class="dropdown-item my-2">
+                    Aplicações Web e Software
                   </router-link>
                 </li>
-                <!-- <li @click="hideMenu()"><a class="dropdown-item my-2" href="#">Consultoria SEO</a></li>
-                <li @click="hideMenu()"><a class="dropdown-item my-2" href="#">Infraestrutra em Cloud</a></li> -->
+                <li @click="hideMenu()">
+                  <router-link :to="{ path: '/seo' }" class="dropdown-item my-2">
+                    Consultoria de SEO
+                  </router-link>
+                </li>
+                
               </ul>
             </li>
             <li class="nav-item" @click="hideMenu()">

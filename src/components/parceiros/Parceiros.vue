@@ -6,12 +6,12 @@
 
       <div class="row">
         <div class="col-10 mx-auto partners my-5">
-          <img src="./imgs/amil.png" alt="" class="w-100">
-          <img src="./imgs/claro.png" alt="" class="w-100">
-          <img src="./imgs/lubrax.svg" alt="" class="w-100">
-          <img src="./imgs/maguary.png" alt="" class="w-100">
-          <img src="./imgs/mercadoPago.png" alt="" class="w-100">
-          <img src="./imgs/tigre.png" alt="" class="w-100">
+          <img src="./imgs/amil.webp" alt="" class="w-100">
+          <img src="./imgs/claro.webp" alt="" class="w-100">
+          <img src="./imgs/lubrax.webp" alt="" class="w-100">
+          <img src="./imgs/maguary.webp" alt="" class="w-100">
+          <img src="./imgs/mercadoPago.webp" alt="" class="w-100">
+          <img src="./imgs/tigre.webp" alt="" class="w-100">
         </div>
       </div>
       

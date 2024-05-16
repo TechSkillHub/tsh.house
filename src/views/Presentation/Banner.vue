@@ -24,7 +24,7 @@ export default {
 
 <style lang="scss" scoped>
 #banner {
-  background-image: url('./imgs/matiz.jpg');
+  background-image: url('./imgs/matiz.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

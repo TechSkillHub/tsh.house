@@ -60,7 +60,7 @@ export default {
   padding-bottom: 20px;
   background-color: $grey1;
   @media (min-width: $md) {
-    background-image: url('./imgs/bg.jpg');
+    background-image: url('./imgs/bg.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
