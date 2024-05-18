@@ -2,13 +2,12 @@
   <div id="seo" class="conteiner-fluid">
     <div class="cover"></div>
     
-    <div class="container">
+    <div class="container top">
       <h1>Consultoria de SEO</h1>
       <div class="col-12 col-xl-7">
-        <!-- <h4 class="mt-5 mb-4">Qual a importância de um site para sua empresa?</h4> -->
-        <p class="my-5">SEO (Search Engine Optimization), ou Otimização para Motores de Busca, é um conjunto de técnicas e estratégias aplicadas para melhorar a visibilidade de um site nos resultados orgânicos dos mecanismos de busca, como o Google, Bing e Yahoo. O objetivo principal do SEO é aumentar o tráfego qualificado para o site, por meio da melhoria da sua posição nos resultados de pesquisa para determinadas palavras-chave relevantes ao conteúdo oferecido. </p>
-        <hr/>
+        <p class="my-4">SEO (Search Engine Optimization), ou Otimização para Motores de Busca, é um conjunto de técnicas e estratégias aplicadas para melhorar a visibilidade de um site nos resultados orgânicos dos mecanismos de busca, como o Google, Bing e Yahoo. O objetivo principal do SEO é aumentar o tráfego qualificado para o site, por meio da melhoria da sua posição nos resultados de pesquisa para determinadas palavras-chave relevantes ao conteúdo oferecido. </p>
       </div>
+      <hr class="col-xl-7"/>
       <div class="form">
         <h5>Solicite um orçamento</h5>
         <Budget />
@@ -104,6 +103,14 @@ export default {
   .container {
     position: relative;
     z-index: 1;
+    &.top {
+      position: relative;
+      min-height: 330px;
+      hr {
+        position: absolute;
+        bottom: 0;
+      }
+    }
     h1 {
       font-size: 1.75rem;
       width: fit-content;

@@ -2,13 +2,14 @@
   <div id="aplicacoes" class="conteiner-fluid">
     <div class="cover"></div>
     
-    <div class="container">
+    <div class="container top">
       <h1>Aplicações Web e sistemas</h1>
       <div class="col-12 col-xl-7">
-        <p class="">Na era digital, ter uma presença online robusta é essencial para o sucesso dos negócios. As aplicações web são a chave para desbloquear todo o potencial da sua empresa, oferecendo flexibilidade, acessibilidade e funcionalidades avançadas diretamente no navegador.</p>
-        <p>Nossas aplicações web são desenvolvidas sob medida para atender às necessidades exclusivas da sua empresa. Desde simples websites informativos até complexos sistemas de gestão empresarial, nossa equipe de especialistas trabalha para criar soluções digitais que impulsionam o seu negócio para o próximo nível.</p>
-        <hr/>
+        <p class="my-5">
+          Nossas aplicações web são desenvolvidas sob medida para atender às necessidades exclusivas da sua empresa. Desde simples websites informativos até complexos sistemas de gestão empresarial, nossa equipe de especialistas trabalha para criar soluções digitais que impulsionam o seu negócio para o próximo nível.
+        </p>
       </div>
+      <hr class="col-xl-7"/>
       <div class="form">
         <h5>Solicite um orçamento</h5>
         <Budget />
@@ -86,6 +87,14 @@ export default {
   .container {
     position: relative;
     z-index: 1;
+    &.top {
+      position: relative;
+      min-height: 330px;
+      hr {
+        position: absolute;
+        bottom: 0;
+      }
+    }
     h1 {
       font-size: 1.75rem;
       width: fit-content;

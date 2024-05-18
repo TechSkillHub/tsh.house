@@ -37,7 +37,7 @@ export default {
     modalDefault() {
       return this.$store.state.manager.modalDefault
     },
-    route() {
+    route() { 
       return this.$route.path
     }
   },

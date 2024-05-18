@@ -5,6 +5,7 @@ import Presentation from '../views/Presentation/index.vue'
 import Sites from '../views/Sites.vue'
 import Software from '../views/Software.vue'
 import Seo from '../views/Seo.vue'
+import Cloud from '../views/Cloud.vue'
 // import Proposal from '../views/proposal/Proposal.vue'
 import store from '../store'
 
@@ -38,6 +39,11 @@ const routes = [
     path: '/seo',
     name: 'seo',
     component: Seo
+  },
+  {
+    path: '/cloud',
+    name: 'cloud',
+    component: Cloud
   },
   // {
   //   path: '/proposal',

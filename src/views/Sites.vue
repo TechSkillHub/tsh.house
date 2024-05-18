@@ -2,13 +2,13 @@
   <div id="sites" class="conteiner-fluid">
     <div class="cover"></div>
     
-    <div class="container">
+    <div class="container top">
       <h1>Desenvolvimento de Sites</h1>
       <div class="col-12 col-xl-7">
-        <h4 class="mt-5 mb-4">Qual a importância de um site para sua empresa?</h4>
+        <h4 class="mt-4 mb-4">Qual a importância de um site para sua empresa?</h4>
         <p class="mb-5">Nos dias de hoje, a presença online é fundamental para comunicar, anunciar e conectar-se com os usuários. Portanto, ter um site é crucial para que sua empresa seja localizada pelo seu público-alvo e, sobretudo, seja percebida como relevante.</p>
-        <hr/>
       </div>
+      <hr class="col-xl-7"/>
       <div class="form">
         <h5>Solicite um orçamento</h5>
         <Budget />
@@ -76,6 +76,14 @@ export default {
   .container {
     position: relative;
     z-index: 1;
+    &.top {
+      position: relative;
+      min-height: 330px;
+      hr {
+        position: absolute;
+        bottom: 0;
+      }
+    }
     h1 {
       font-size: 1.75rem;
       width: fit-content;

@@ -4,14 +4,13 @@
       <div class="container">
         <router-link
           class="navbar-brand logo"
-          :to="{ path: '/', hash: '#banner' }"
+          :to="{ path: '/' }"
           @click="hideMenu()"
         >
           Tech Skill Hub
           <span>SOFTWARE HOUSE</span>
         </router-link>
-        <!-- <button class="primary desk mx-2">Candidato</button>
-        <button class="primary desk">Empresa</button> -->
+        
         <button
           class="navbar-toggler"
           type="button"
@@ -25,30 +24,20 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-          <!-- <div class="mobile mt-3 justify-content-around">
-            <button class="primary">Candidato</button>
-            <button class="primary">Empresa</button>
-          </div> -->
+          
           <ul class="navbar-nav ms-auto mb-2 mb-md-0">
-            <li class="nav-item" @click="hideMenu()">
+            <!-- <li class="nav-item" @click="hideMenu()">
               <router-link
-                :to="{ path: '/', hash: '#banner' }"
+                :to="{ path: '/' }"
                 class="nav-link"
-                :class="currentPage == '/#banner' ? 'active' : ''"
+                :class="currentPage == '/' ? 'active' : ''"
                 >Home</router-link
               >
-            </li>
-            <li class="nav-item" @click="hideMenu()">
-              <router-link
-                :to="{ path: '/', hash: '#solucoes' }"
-                class="nav-link"
-                :class="currentPage == '/#solucoes' ? 'active' : ''"
-                >Soluções</router-link
-              >
-            </li>
+            </li> -->
+            
             <li 
               class="nav-item dropdown"
-              :class="currentPage == '/sites' || currentPage == '/software' || currentPage == '/seo' ? 'active' : ''"
+              :class="currentPage == '/sites' || currentPage == '/software' || currentPage == '/seo' || currentPage == '/cloud' ? 'active' : ''"
             >
               <a class="nav-link dropdown-toggle" role="button" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                 Serviços
@@ -69,8 +58,21 @@
                     Consultoria de SEO
                   </router-link>
                 </li>
+                <li @click="hideMenu()">
+                  <router-link :to="{ path: '/cloud' }" class="dropdown-item my-2">
+                    Infraestrutra em Cloud
+                  </router-link>
+                </li>
                 
               </ul>
+            </li>
+            <li class="nav-item" @click="hideMenu()">
+              <router-link
+                :to="{ path: '/', hash: '#solucoes' }"
+                class="nav-link"
+                :class="currentPage == '/#solucoes' ? 'active' : ''"
+                >Soluções</router-link
+              >
             </li>
             <li class="nav-item" @click="hideMenu()">
               <router-link

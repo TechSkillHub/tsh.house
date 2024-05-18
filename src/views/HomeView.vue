@@ -1,6 +1,6 @@
 <template>
   <div
-    class="scrollspy-example"
+    class="scrollspy"
     data-bs-spy="scroll"
     data-bs-target="#header"
     data-bs-offset="0"
@@ -40,9 +40,7 @@ export default {
     QuemSomos
   },
   computed: {
-    currentPage() {
-      return this.$store.state.manager.currentPage
-    }
+    
   },
   mounted() {},
   methods: {},
@@ -51,4 +49,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 </style>
