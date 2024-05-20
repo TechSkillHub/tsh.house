@@ -1,0 +1,6 @@
+
+- Na lista de serviços colocar o link para a pagina de cada serviços
+- Tbm adicionar os precos promocionais e forma de pagamento
+- Adicionar o fluxo de aquisição do produto
+
+

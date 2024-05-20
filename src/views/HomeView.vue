@@ -6,11 +6,12 @@
     data-bs-offset="0"
     tabindex="0"
   >
-    <Banner />
+    
     <Solucoes />
-    <Parallax />
+    <Banner />
+    <!-- <Parallax /> -->
     <Tecnologias />
-    <Parallax />
+    <!-- <Parallax /> -->
     <Parceiros />
     <QuemSomos />
     <FaleConosco />    

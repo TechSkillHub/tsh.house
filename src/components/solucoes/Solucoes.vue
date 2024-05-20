@@ -1,7 +1,7 @@
 <template>
   <div id="solucoes" class="container-fluid d-flex align-itens-center">
     <div class="container d-flex flex-column justify-content-center text-center">
-      <h1 class="mb-5">A <span>Tech Skill Hub</span> possuí a solução<br/>ideal para sua necessidade!</h1>
+      <h1 class="mb-5">A <span>Tech Skill Hub</span> possuí a solução<br/>que falta para o sucesso da sua empresa!</h1>
       <div class="row justify-content-around">
         <div v-for="(item, index) in solutions" :key="index" class="col-10 col-lg card mx-2 mb-5 pb-4">
           <img
@@ -34,7 +34,7 @@ export default {
         {
           image: iconIdentity,
           title: 'Identidade Visual',
-          text: 'Criamos toda o manual de identidade visual da empresa, logo, mochups, fachada, entre outros.'
+          text: 'Ajudamos na criação da identidade visual da empresa, logo, mochups, fachada, entre outros.'
         },
         {
           image: iconInfra,

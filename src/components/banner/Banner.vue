@@ -5,10 +5,16 @@
       <div class="row d-flex flex-row">
         <div class="col-10 col-lg-7 mx-auto bg-text mb-5">
           <h5>
-            Nós da <span>TSH</span>, estamos comprometidos em oferecer uma ampla gama de serviços essenciais para aprimorar sua presença online e garantir que sua marca se destaque no mundo digital.
+            <!-- Nós da <span>TSH</span>, estamos comprometidos em oferecer uma ampla gama
+            de serviços essenciais para aprimorar sua presença online e garantir que sua marca
+            se destaque no mundo digital. -->
+            Se quer que sua empresa seja reconhecida, a presença online é vital!
+            Da estética do site à estratégia de SEO da identidade visual ao tráfego pago, 
+            cada detalhe online é um impulso para o crescimento
+            e sucesso do seu negócio. E a <span>TSH</span> está aqui para turbinar cada passo!
           </h5>
           <router-link :to="{ path: '/', hash: '#fale-conosco' }">
-            <button class="primary mt-4">Conte-nos sua idéia</button>
+            <button class="primary mt-4">Não perca tempo</button>
           </router-link>
         </div>
         

@@ -172,7 +172,7 @@ export default {
   }
 }
 nav {
-  background-color: $black;
+  background-color: $primary-light;
   color: $offWhite;
 }
 nav.navbar {
@@ -182,7 +182,7 @@ nav.navbar {
     color: $white;
     text-decoration: none;
     &.active, &:hover {
-      color: $primary-light;
+      color: $secondary;
       &::after {
         display: block;
         content: ' ';
@@ -200,7 +200,7 @@ nav.navbar {
     &.active {
       margin-bottom: 6px;
       >a {
-        color: $primary-light;
+        color: $primary;
         border-bottom: 2px solid $secondary;
         padding-bottom: 0;
       }
@@ -268,7 +268,7 @@ nav.navbar {
     color: $secondary;
     span {
       font-family: 'Montserrat', sans-serif;
-      background-color: $primary-light;
+      background-color: $primary;
       color: $black;
       border-radius: 8px;
       padding: 0.2rem 0.5rem;
