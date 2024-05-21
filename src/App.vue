@@ -6,9 +6,9 @@
   <transition name="fade" mode="out-in">
     <Loading v-if="loading" />
   </transition>
-  <Header v-if="route != '/presentation'" />
+  <Header v-if="route != '/presentation' && route != '/landing-sites'" />
   <RouterView />
-  <Footer v-if="route != '/presentation'" />
+  <Footer v-if="route != '/presentation' && route != '/landing-sites'" />
 </template>
 
 <script>

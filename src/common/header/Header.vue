@@ -177,12 +177,14 @@ nav {
 }
 nav.navbar {
   padding: 14px 0;
+  font-weight: 500;
   .nav-item:not(.dropdown) a {
     width: fit-content;
     color: $white;
     text-decoration: none;
     &.active, &:hover {
       color: $secondary;
+      // font-weight: 600;
       &::after {
         display: block;
         content: ' ';
@@ -200,7 +202,7 @@ nav.navbar {
     &.active {
       margin-bottom: 6px;
       >a {
-        color: $primary;
+        color: $secondary;
         border-bottom: 2px solid $secondary;
         padding-bottom: 0;
       }
@@ -231,7 +233,7 @@ nav.navbar {
         color: white;
       }
       &:hover>a {
-        color: $primary !important;
+        color: $secondary !important;
       }
     }
     .dropdown:hover {

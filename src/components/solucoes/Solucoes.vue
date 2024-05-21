@@ -2,21 +2,43 @@
   <div id="solucoes" class="container-fluid d-flex align-itens-center">
     <div class="container d-flex flex-column justify-content-center text-center">
       <h1 class="mb-5">A <span>Tech Skill Hub</span> possuí a solução<br/>que falta para o sucesso da sua empresa!</h1>
-      <div class="row justify-content-around">
-        <div v-for="(item, index) in solutions" :key="index" class="col-10 col-lg card mx-2 mb-5 pb-4">
-          <img
-            :src="item.image"
-            alt="Soluções"
-            width="200"
-            style="margin: 23px auto !important;"
-          />
-          <h6 class="mt-4">{{ item.title }}</h6>
-          <p class="mx-auto">
-            {{ item.text }}
-          </p>
+      <div class="row">
+        <div class="col-12 col-lg-8">
+          <div class="row justify-content-center gap-4">
+            <div v-for="(item, index) in solutions" :key="index" class="col-10 col-lg-5 card pb-2" @click="irPara(item.route)">
+              <img
+                :src="item.image"
+                alt="Soluções"
+                width="150"
+                class="img-fluid mx-auto"
+              />
+              <h6 class="mt-2">{{ item.title }}</h6>
+              <p class="mx-auto">
+                {{ item.text }}
+              </p>
+              <!-- <div class="price d-flex flex-column">
+                <small>A partir de:</small>
+                <span class="entrada" v-if="item.price != 'Sob Consulta'">Entrada</span>
+                <div class="d-flex">
+                  <span class="valor plus" v-if="item.price != 'Sob Consulta'">+</span>
+                  <span class="valor" :class="item.price == 'Sob Consulta' ? 'fs-3 mt-2' : 'ms-1'">{{ item.price }}</span>
+                  <span class="parcelas" v-if="item.price != 'Sob Consulta'">12x</span>
+                </div>
+              </div> -->
+              <div class="ms-auto mt-auto saibaMais">
+                Saiba mais <i class="fa-solid fa-circle-plus"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 mt-5 mt-lg-0">
+          <div class="form">
+            <h6 class="my-3">Preencha o formulário e um de nossos consultores entrará em contato sem compromisso!</h6>
+            <Budget class="mt-auto" />
+          </div>
+          <h6 class="p-3 mt-3">Com nossa experiência e dedicação, fornecemos soluções abrangentes para impulsionar seu sucesso empresarial.</h6 class="p-3 mt-3">
         </div>
       </div>
-      <h5>Com nossa experiência e dedicação, fornecemos soluções abrangentes para impulsionar seu sucesso empresarial.</h5>
     </div>
   </div>
 </template>
@@ -26,6 +48,7 @@ import iconIdentity from './imgs/identity.svg'
 import iconInfra from './imgs/infra.svg'
 import iconSoftware from './imgs/software.svg'
 import iconSeo from './imgs/seo.svg'
+import Budget from './../budget/Budget.vue'
 
 export default {
   data() {
@@ -33,35 +56,50 @@ export default {
       solutions: [
         {
           image: iconIdentity,
-          title: 'Identidade Visual',
-          text: 'Ajudamos na criação da identidade visual da empresa, logo, mochups, fachada, entre outros.'
+          title: 'Desenvolvimento de Sites',
+          text: 'Ter um site ajuda a construir credibilidade e profissionalismo para seu negócio ou projeto. Além de seu negócio estar acessível 24/7.',
+          route:'/sites',
+          price: 'R$240'
         },
         {
           image: iconInfra,
-          title: 'Infraestrutura',
-          text: 'Todos nossos sistemas são hospedados em cloud pelo fato de poder oferecer uma estrutura com uma ótima perfomace e um baixo custo.'
+          title: 'Infraestrutura em Cloud',
+          text: 'Todos nossos sistemas são hospedados em cloud pelo fato de poder oferecer uma estrutura com uma ótima perfomace e um baixo custo.',
+          route:'/cloud',
+          price: 'R$490'
         },
         {
           image: iconSoftware,
-          title: 'Desenvolvimento de Software',
-          text: 'Desenvolvemos software com foco em soluções específicas e performance, buscando a melhor experiência e desempenho.'
+          title: 'Aplicações Web e Software',
+          text: 'Desenvolvemos software com foco em soluções específicas e performance, buscando a melhor experiência e desempenho.',
+          route:'/software',
+          price: 'Sob Consulta'
         },
         {
           image: iconSeo,
-          title: 'SEO',
-          text: 'Aplicar regras para aumentar o alcance do seu site de forma orgânica, assim tendo um melhor ranqueamento do seu site no Google.'
+          title: 'Consultoria de SEO',
+          text: 'Aplicar regras para aumentar o alcance do seu site de forma orgânica, assim tendo um melhor ranqueamento do seu site no Google.',
+          route:'/seo',
+          price: 'R$20'
         },
       ]
     }
   },
-  methods: {}
+  components: {
+    Budget
+  },
+  methods: {
+    irPara(value) {
+      this.$router.push(value)
+    }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
 #solucoes {
   background-color: $offWhite;
-  padding: 80px 0;
+  padding: 50px 0;
   h1 {
     color: $black;
     span {
@@ -73,6 +111,7 @@ export default {
     color: $primary;
     min-height: 48px;
     line-height: 110%;
+    
   }
   h5 {
     color: $primary;
@@ -81,7 +120,9 @@ export default {
     font-size: 1.75rem;
   }
   .card{
+    cursor: pointer;
     border: 5px solid transparent;
+    overflow: hidden;
     img {
       transition: all 0.5s;
     }
@@ -90,6 +131,46 @@ export default {
       img {
         transform: scale(1.2);
       }
+    }
+    .saibaMais {
+      color: $secondary;
+      font-weight: 600;
+    }
+  }
+  .form {
+    background-color: $primary-light;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    height: 100%;
+    h6 {
+      color: $dark;
+      font-size: 1.25rem;
+    }
+  }
+  .price {
+    text-align: left;
+    position: relative;
+    >div {
+      margin-top: -5px;
+    }
+    .entrada {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+    .valor {
+      color: $alert;
+      font-size: 2.9rem;
+      vertical-align: text-bottom;
+      font-weight: 700;
+      &.plus {
+        font-size: 2rem;
+      }
+    }
+    .parcelas {
+      position: absolute;
+      bottom: 9px;
+      font-size: 90%;
+      font-weight: 500;
     }
   }
   @media (max-width: $lg) {

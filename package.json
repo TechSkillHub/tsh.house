@@ -12,6 +12,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@chenfengyuan/vue-countdown": "^2.1.2",
     "@popperjs/core": "^2.11.8",
     "@vee-validate/i18n": "^4.11.6",
     "@vee-validate/rules": "^4.11.6",
@@ -19,7 +20,7 @@
     "maska": "^2.1.10",
     "moment": "^2.29.4",
     "vee-validate": "^4.11.6",
-    "vue": "^3.3.2",
+    "vue": "^3.4.27",
     "vue-router": "^4.2.0",
     "vue-select": "^4.0.0-beta.6",
     "vuex": "^4.0.2"

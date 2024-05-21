@@ -6,6 +6,7 @@ import Sites from '../views/Sites.vue'
 import Software from '../views/Software.vue'
 import Seo from '../views/Seo.vue'
 import Cloud from '../views/Cloud.vue'
+import LandingSites from '../views/Landings/Sites/Sites.vue'
 // import Proposal from '../views/proposal/Proposal.vue'
 import store from '../store'
 
@@ -44,6 +45,11 @@ const routes = [
     path: '/cloud',
     name: 'cloud',
     component: Cloud
+  },
+  {
+    path: '/landing-sites',
+    name: 'landing-sites',
+    component: LandingSites
   },
   // {
   //   path: '/proposal',

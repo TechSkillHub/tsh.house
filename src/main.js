@@ -6,6 +6,7 @@ import interceptors from '@/helpers/interceptors'
 import validations from '@/helpers/validations'
 import { Form, Field, ErrorMessage } from 'vee-validate';
 import vSelect from 'vue-select'
+import VueCountdown from '@chenfengyuan/vue-countdown';
 
 // interceptors requests e responses
 interceptors.request()
@@ -17,6 +18,7 @@ app.component('Field', Field)
 app.component('Form', Form)
 app.component('ErrorMessage', ErrorMessage)
 app.component('v-select', vSelect)
+app.component(VueCountdown.name, VueCountdown);
 
 app.use(router)
 app.use(store)
