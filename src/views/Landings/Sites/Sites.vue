@@ -6,8 +6,8 @@
           <h2>Tech Skill Hub</h2>
           <span>Software House</span>
         </div>
-        <div class="time">
-          <h5>FIM DA OFERTA ESPECIAL:</h5>
+        <div class="time text-end">
+          <h5 class="lh-sm">A CONDIÇÃO ESPECIAL<br/>ENCERRA EM:</h5>
           <vue-countdown :time="endTime" v-slot="{ hours, minutes, seconds }">
             <div class="square">
               {{ hours }}
@@ -26,27 +26,68 @@
     </div>
     <div class="banner">
       <div class="container">
-        <div class="col-7 text-center pt-5">
-          <h1>NÃO PERCA TEMPO!!!</h1>
-          <h2>SEU SITE <small>POR APENAS</small></h2>
-          <h3>Entrada +</h3>
+        <div class="row">
+          <div class="col-7 pt-5 splash">
+            <h1>NÃO PERCA TEMPO!!!</h1>
+            <h2>TENHA SEU SITE</h2>
+            <div class="box mt-4">
+              <div class="list">
+                <i class="fa-regular fa-circle-check"></i> Presença Online 24/7
+                <i class="fa-regular fa-circle-check"></i> Credibilidade e Profissionalismo
+                <i class="fa-regular fa-circle-check"></i> Marketing e Promoção
+                <i class="fa-regular fa-circle-check"></i> Informação e Atendimento ao Cliente
+                <i class="fa-regular fa-circle-check"></i> Análise e Melhorias Contínuas
+              </div>
+              <Form>
+                <small>
+                  Deixe seu e-mail e um de nossos consultores entrará em contato assim que possível.
+                </small>
+                <Input
+                  idInput="email"
+                  nameInput="e-mail"
+                  typeInput="email"
+                  rulesInput="required|email"
+                  placeholderInput="Deixe seu melhor e-mail."
+                  @value="(i) => i.value.length >= 0 ? form.email = i.value : form.email"
+                  :valueInput="form.email"
+                />
+                
+                <button class="primary ms-auto" @click.prevent="submit()">
+                  Quero meu site!
+                </button>
+              </Form>
+            </div>
+          </div>
         </div>
-        <!-- <div class="offset-7 col-5">
-          <img src="./imgs/websites.png" class="img-fluid my-5" alt="">
-        </div> -->
+        <div class="row mt-3">
+          <div class="col-12 splash">
+            <div class="price">
+              <small>POR APENAS</small>
+              <h4>Entrada +</h4>
+              <h2 style="margin-top: -30px;"><span>12x de</span> R$240</h2>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 <script>
+import Input from './../../../components/form/Input.vue'
 export default {
   data() {
     const now = new Date();
     const tomorrow = new Date('2024, 5, 22 : 10:00:00');
     
     return {
-      endTime: tomorrow-now
+      endTime: tomorrow-now,
+      form: {
+        email: ''
+      }
     }
+  },
+  components: {
+    Input
   }
   
 }
@@ -87,12 +128,12 @@ export default {
       align-items: center;
       h5 {
         margin-bottom: 0;
-        color: $secondary-light;
+        color: $secondary;
       }
       .square {
         background-color: $primary;
         border-radius: 8px;
-        border: 2px solid $secondary-light;
+        border: 2px solid $secondary;
         padding: 0.75rem 0.5rem;
         width: 60px;
         text-align: center;
@@ -117,16 +158,85 @@ export default {
     background-repeat: no-repeat;
     background-position: center right;
     background-size: 55%;
-    h1 {
-      font-size: 4rem;
-      color: $white;    
-      font-weight: 900;
-      text-shadow:
-        3px 3px 0 $error,
-        -1px -1px 0 $error,  
-        1px -1px 0 $error,
-        -1px 1px 0 $error,
-        1px 1px 0 $error;
+    .splash {
+      .box {
+        background-color: $dark;
+        border-radius: 0.5rem;
+        padding: 2rem;
+        width: fit-content;
+        .list {
+          color: $white;
+          display: grid;
+          grid-template-columns: auto auto;
+          gap: 0.75rem 0.5rem;
+          align-items: center;
+          font-size: 1.5rem;
+        }
+      }
+      .price {
+        width: fit-content;
+        margin: auto;
+      }
+      h1 {
+        font-size: 3rem;
+        line-height: 100%;
+        color: red;    
+        font-weight: 900;
+        text-shadow:
+          5px 5px 0 yellow,
+          -2px -2px 0 yellow,  
+          2px -2px 0 yellow,
+          -2px 2px 0 yellow,
+          2px 2px 0 yellow;
+        // transform: rotate(-5deg);
+        // margin-left: 200px;
+      }
+      h2 {
+        font-size: 4.5rem;
+        line-height: 100%;
+        font-weight: 900;
+        color: $primary-light;
+        text-shadow:
+          5px 5px 0 $secondary,
+          -2px -2px 0 $secondary,  
+          2px -2px 0 $secondary,
+          -2px 2px 0 $secondary,
+          2px 2px 0 $secondary;
+        // transform: rotate(-5deg);
+        span {
+          vertical-align: text-bottom;
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}
+</style>
+<style lang="scss">
+#lp-sites {
+  .splash {
+    .box {
+      form {
+        margin-top: 1rem;  
+        small {
+          color: white;
+          max-width: 470px;
+          display: block;
+          margin-bottom: 0.5rem;
+          margin-left: 0.5rem;
+          margin-top: 1.5rem;
+        }
+        input {
+          border-radius: 25px;
+          min-height: auto;
+          border: none;
+          padding: 8px 15px;
+          margin-bottom: 0
+        }
+        button {
+          border-radius: 25px;
+        }
+      }
     }
   }
 }

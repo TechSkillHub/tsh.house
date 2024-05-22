@@ -141,7 +141,6 @@ export default {
     background-color: $primary-light;
     padding: 1rem;
     border-radius: 0.5rem;
-    height: 100%;
     h6 {
       color: $dark;
       font-size: 1.25rem;
@@ -180,6 +179,9 @@ export default {
     }
     h5 {
       font-size: 1.25rem;
+    }
+    form {
+      height: 100%;
     }
   }
 }

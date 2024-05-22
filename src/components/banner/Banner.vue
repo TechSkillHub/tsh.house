@@ -82,7 +82,7 @@ export default {
     .container {
       .bg-text {
         h5 {
-          font-size: 1.2rem;
+          font-size: 1rem;
           span {
             font-size: 1.75rem;
           }
