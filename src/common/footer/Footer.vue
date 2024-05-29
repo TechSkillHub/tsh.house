@@ -7,7 +7,7 @@
             class="col-12 col-md-4 mb-3 mb-md-0 text-center text-md-start d-flex flex-column align-items-center"
           >
             <div class="text-center me-md-auto">
-            <router-link :to="{ path: '/', hash: '#banner' }">
+            <router-link :to="{ path: '/'}">
               <img src="./imgs/logo.svg" class="logo" alt="Logo Tech Skill Hub" /><br/>
             </router-link>
             </div>
@@ -30,11 +30,11 @@
                 <img src="./imgs/instagram.svg" alt="Icon Instagram" />
               </a>
             </li>
-            <!-- <li class="mx-3">
-              <a href="http://www.facebook.com" target="_blank">
+            <li class="mx-3">
+              <a href="https://www.facebook.com/tsh.techskillhub" target="_blank">
                 <img src="./imgs/facebook.svg" alt="Icon Facebook" />
               </a>
-            </li> -->
+            </li>
           </ul>
         </div>
       </div>

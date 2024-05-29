@@ -22,10 +22,12 @@
                 <i class="fa-regular fa-circle-check"></i> Estreita sua <span>relação com os clientes</span>
                 <i class="fa-regular fa-circle-check"></i> <span>Análise de dados</span> e melhorias contínuas
               </div>
-              <div class="contact mt-4">
-                Entre em contato <br class="d-lg-none"/>pelo WhatsApp
-                <img src="./imgs/whatsapp.svg" alt="">
-              </div>
+              <a href="https://w.app/SitesbyTechSkillHub" target="_blank">
+                <div class="contact mt-4">
+                  Entre em contato <br class="d-lg-none"/>pelo WhatsApp
+                  <img src="./imgs/whatsapp.svg" alt="">
+                </div>
+              </a>
             </div>
           </div>
           <div class="col-12 col-lg-7 d-flex align-items-center">
@@ -46,12 +48,14 @@
 
     <div class="perks">
       <div class="top pt-4">
-      <h2 class="text-center">Por que investir em um <span>site profissional?</span></h2>
+        <h2 class="text-center">Por que investir em um <span>site profissional?</span></h2>
       </div>
-      <div class="col-10 col-lg-7 mx-auto boxMain p-3 p-lg-5">
-        <h6 class="text-center mb-0">
-          Ter um site profissional é mais do que estar na internet. É uma forma de passar confiança, melhorar a experiência dos visitantes, ser encontrado mais facilmente e fazer marketing de forma mais eficaz. Tudo isso ajuda a atrair mais clientes e aumentar as vendas.
-        </h6>
+      <div class="container">
+        <div class="col-10 mx-auto boxMain p-3 p-lg-5">
+          <h6 class="text-center mb-0">
+            Ter um site profissional é mais do que estar na internet. É uma forma de passar confiança, melhorar a experiência dos visitantes, ser encontrado mais facilmente e fazer marketing de forma mais eficaz. Tudo isso ajuda a atrair mais clientes e aumentar as vendas.
+          </h6>
+        </div>
       </div>
 
       <div class="container mx-auto mt-5">
@@ -92,9 +96,11 @@
           </div>
         </div>
 
-        <div class="row">
-          <button class="mx-auto mt-5">QUERO MEU SITE PROFISSIONAL!</button>
-        </div>
+        <a href="https://w.app/SitesbyTechSkillHub" target="_blank">
+          <div class="row">
+            <button class="mx-auto mt-5">QUERO MEU SITE PROFISSIONAL!</button>
+          </div>
+        </a>
 
       </div>
     </div>
@@ -133,9 +139,11 @@
           </div> -->
         </div>
 
-        <div class="row">
-          <button class="mx-auto mt-lg-5 mt-3">VAMOS FAZER MEU SITE!</button>
-        </div>
+        <a href="https://w.app/SitesbyTechSkillHub" target="_blank">
+          <div class="row">
+            <button class="mx-auto mt-lg-5 mt-3">QUERO FAZER MEU SITE!</button>
+          </div>
+        </a>
 
       </div>
     </div>
@@ -214,6 +222,9 @@ export default {
             color: $primary;
             display: contents;
           }
+        }
+        a {
+          text-decoration: none;
         }
         .contact {
           background-color: $success;
@@ -324,6 +335,9 @@ export default {
         color: white;
       }
     }
+    a {
+      text-decoration: none;
+    }
     button {
       background: rgb(128,0,255);
       background: linear-gradient(180deg, rgba(128,0,255,1) 0%, rgba(70,0,139,1) 100%);
@@ -388,6 +402,9 @@ export default {
         margin-bottom: 0.5rem;
         display: block;
       }
+    }
+    a {
+      text-decoration: none;
     }
     button {
       // background: rgb(128,0,255);
