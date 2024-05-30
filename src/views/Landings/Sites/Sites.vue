@@ -166,7 +166,7 @@ export default {
 <style lang="scss" scoped>
 #lp-sites {
   min-height: 100vh;
-  background: $grey3;
+  background: $white;
   margin-top: -100px;
   .banner {
     background-image: url('./imgs/bg_top.webp');

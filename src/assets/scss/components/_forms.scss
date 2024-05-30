@@ -11,6 +11,10 @@ form {
       border-color: $error;
       background-color: rgba($error, 0.2);
     }
+    @media (max-width: $lg) {
+      font-size: 14px;
+      min-height: auto;
+    }
   }
   span {
     display: flex;
@@ -21,6 +25,9 @@ form {
     padding: 0;
     align-items: baseline;
     min-height: 30px;
+    @media (max-width: $lg) {
+      font-size: 10px;
+    }
   }
   .v-select {
     width: 100%;
@@ -100,6 +107,9 @@ button {
   font-weight: 500;
   cursor: pointer;
   width: fit-content;
+  @media (max-width: $lg) {
+    font-size: 14px;
+  }
   &.primary {
     background-color: $primary;
     color: $white;

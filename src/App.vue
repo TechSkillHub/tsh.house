@@ -51,6 +51,9 @@ export default {
 @import '@/assets/scss/main.scss';
 #app {
   padding-top: 99px;
+  @media (max-width: $lg) {
+    padding-top: 86px;
+  }
 }
 .v-enter-active,
 .v-leave-active {

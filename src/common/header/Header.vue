@@ -178,6 +178,10 @@ nav {
 nav.navbar {
   padding: 14px 0;
   font-weight: 500;
+  height: 99px;
+  @media (max-width: $lg) {
+    height: auto;
+  }
   .nav-item:not(.dropdown) a {
     width: fit-content;
     color: $white;
@@ -266,16 +270,16 @@ nav.navbar {
   }
   .logo {
     font-family: $fontLogo;
-    font-size: 33px;
+    font-size: 2rem;
     color: $secondary;
     span {
       font-family: 'Montserrat', sans-serif;
       background-color: $primary;
       color: $black;
-      border-radius: 8px;
+      border-radius: 11px;
       padding: 0.2rem 0.5rem;
       font-weight: 700;
-      font-size: 11px;
+      font-size: 8px;
       display: block;
       width: fit-content;
       margin-left: auto;
@@ -283,6 +287,12 @@ nav.navbar {
     &::after {
       content: none !important;
       text-decoration: none;
+    }
+    @media (max-width: $lg) {
+      font-size: 24px;
+      span {
+        font-size: 8px;
+      }
     }
   }
   
