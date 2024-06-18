@@ -7,7 +7,9 @@
       <div class="container my-auto">
         <div class="row">
           <div class="col-12 col-lg-9 ">
-            Nós usamos cookies para garantir a melhor experiência no nosso site, para habilitar serviços e funcionalidades essenciais no nosso site e para coletar dados sobre como os visitantes interagem com o nosso site e serviços. Ao clicar em "Aceitar", você concorda em usarmos todos os cookies para publicidade, análises e suporte. 
+            <p>
+              Nós usamos cookies para garantir a melhor experiência no nosso site, para habilitar serviços e funcionalidades essenciais no nosso site e para coletar dados sobre como os visitantes interagem com o nosso site e serviços. Ao clicar em "Aceitar", você concorda em usarmos todos os cookies para publicidade, análises e suporte. 
+            </p>
           </div>
           <div class="col-12 col-lg-3 d-flex justify-content-evenly align-items-center mt-3 mt-lg-0">
             <button type="button" class="btn primary" @click="acceptCookies()">Aceitar</button>
@@ -54,6 +56,12 @@ export default {
 </script>
 <style lang="scss" scoped>
 #cookies {
+  @media (max-width: $lg) {
+    p {
+      line-height: 120% !important;
+    }
+    font-size: 14px;
+  }
   .modal-dialog {
     max-width: none;
     width: 100vw;

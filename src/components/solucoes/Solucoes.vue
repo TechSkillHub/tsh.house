@@ -223,8 +223,8 @@ export default {
   }
   @media (max-width: $lg) {
     h1 {
-      font-size: 26px;
-      line-height: 120%;
+      font-size: 20px;
+      line-height: 100%;
     }
     h5 {
       font-size: 1.25rem;

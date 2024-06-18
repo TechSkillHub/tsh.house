@@ -1,20 +1,20 @@
 <template>
-  <Cookies />
+  <!-- <Cookies />
   <Transition>
     <ModalDefault v-if="modalDefault.show" :modalInfo="modalDefault" />
   </Transition>
   <transition name="fade" mode="out-in">
     <Loading v-if="loading" />
-  </transition>
+  </transition> -->
   <Header v-if="route != '/presentation' && route != '/landing-sites'" />
   <RouterView />
   <Footer v-if="route != '/presentation' && route != '/landing-sites'" />
 </template>
 
 <script>
-import Cookies from '@/common/cookies/Cookies.vue'
-import ModalDefault from '@/common/modal/Default.vue'
-import Loading from '@/common/loading/Loading.vue'
+// import Cookies from '@/common/cookies/Cookies.vue'
+// import ModalDefault from '@/common/modal/Default.vue'
+// import Loading from '@/common/loading/Loading.vue'
 import Header from '@/common/header/Header.vue'
 import Footer from '@/common/footer/Footer.vue'
 import { RouterView } from 'vue-router'
@@ -24,19 +24,19 @@ export default {
     return {}
   },
   components: {
-    Cookies,
-    ModalDefault,
-    Loading,
+    // Cookies,
+    // ModalDefault,
+    // Loading,
     Header,
     Footer
   },
   computed: {
-    loading() {
-      return this.$store.state.manager.loading
-    },
-    modalDefault() {
-      return this.$store.state.manager.modalDefault
-    },
+    // loading() {
+    //   return this.$store.state.manager.loading
+    // },
+    // modalDefault() {
+    //   return this.$store.state.manager.modalDefault
+    // },
     route() { 
       return this.$route.path
     }

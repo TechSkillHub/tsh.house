@@ -8,37 +8,37 @@
   >
     
     <Solucoes />
-    <Banner />
-    <!-- <Parallax /> -->
+    <!-- <Banner />
+    <Parallax />
     <Tecnologias />
-    <!-- <Parallax /> -->
+    <Parallax />
     <Parceiros />
     <QuemSomos />
-    <FaleConosco />    
+    <FaleConosco />     -->
   </div>
 </template>
 
 <script>
-import Banner from '@/components/banner/Banner.vue'
+// import Banner from '@/components/banner/Banner.vue'
 import Solucoes from '@/components/solucoes/Solucoes.vue'
-import Parallax from '@/components/parallax/Parallax.vue'
-import Tecnologias from '@/components/tecnologias/Tecnologias.vue'
-import Parceiros from '@/components/parceiros/Parceiros.vue'
-import FaleConosco from '@/components/faleConosco/FaleConosco.vue'
-import QuemSomos from '@/components/quemSomos/QuemSomos.vue'
+// import Parallax from '@/components/parallax/Parallax.vue'
+// import Tecnologias from '@/components/tecnologias/Tecnologias.vue'
+// import Parceiros from '@/components/parceiros/Parceiros.vue'
+// import FaleConosco from '@/components/faleConosco/FaleConosco.vue'
+// import QuemSomos from '@/components/quemSomos/QuemSomos.vue'
 
 export default {
   data() {
     return {}
   },
   components: {
-    Banner,
+    // Banner,
     Solucoes,
-    Parallax,
-    Tecnologias,
-    Parceiros,
-    FaleConosco,
-    QuemSomos
+    // Parallax,
+    // Tecnologias,
+    // Parceiros,
+    // FaleConosco,
+    // QuemSomos
   },
   computed: {
     

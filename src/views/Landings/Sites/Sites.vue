@@ -22,7 +22,7 @@
                 <i class="fa-regular fa-circle-check"></i> Estreita sua <span>relação com os clientes</span>
                 <i class="fa-regular fa-circle-check"></i> <span>Análise de dados</span> e melhorias contínuas
               </div>
-              <a href="https://w.app/SitesbyTechSkillHub" target="_blank">
+              <a href="https://wa.me/5511994070069?text=Ol%C3%A1!%20Quero%20fazer%20meu%20site%20com%20a%20TechSkillHub." target="_blank">
                 <div class="contact mt-4">
                   Entre em contato <br class="d-lg-none"/>pelo WhatsApp
                   <img src="./imgs/whatsapp.svg" alt="">
@@ -96,7 +96,7 @@
           </div>
         </div>
 
-        <a href="https://w.app/SitesbyTechSkillHub" target="_blank">
+        <a href="https://wa.me/5511994070069?text=Ol%C3%A1!%20Quero%20fazer%20meu%20site%20com%20a%20TechSkillHub." target="_blank">
           <div class="row">
             <button class="mx-auto mt-5">QUERO MEU SITE PROFISSIONAL!</button>
           </div>
@@ -139,7 +139,7 @@
           </div> -->
         </div>
 
-        <a href="https://w.app/SitesbyTechSkillHub" target="_blank">
+        <a href="https://wa.me/5511994070069?text=Ol%C3%A1!%20Quero%20fazer%20meu%20site%20com%20a%20TechSkillHub." target="_blank">
           <div class="row">
             <button class="mx-auto mt-lg-5 mt-3">QUERO FAZER MEU SITE!</button>
           </div>
